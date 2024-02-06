@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magic Card Maker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <canvas id="cardview" width="500" height="700"></canvas>
+        <div id="menu">
+            <h1>CARD EDITOR v0.2</h1>
+            <p>Title: <input type="text" id="title"> Max. Length <input id="maxTitleLength" type="number" value="415"></p>
+            <p>Mana Cost: <input type="text" id="manacost"></p>
+            <p>Image (Drag&Drop)</p>
+            <p>Type: <input type="text" id="type"> Subtype: <input type="text" id="subtype"></p>
+            <p>Description: <textarea id="description"></textarea></p>
+            <p><input checked type="checkbox" id="showPowerToughness"> Power: <input type="number" id="power"> Toughness: <input type="number" id="toughness"></p>
+            <p>Meta: <input type="text" id="meta"></p>
+        </div>
+    </body>
+</html>
+
+<script src="TWO.js"></script>
+
+<script src="Card.js"></script>
+<script src="init.js"></script>
+<script src="fonts.js"></script>
+<script src="paths.js"></script>
+<script src="graphics.js"></script>
+<script src="events.js"></script>
+<script src="main.js"></script>
