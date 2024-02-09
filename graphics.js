@@ -30,13 +30,19 @@ const draw_mana_cost = function(c, x, y) {
 
 const fill_card_regions = function() {
     // background
-    ctx.fillStyle = "black";
-    ctx.strokeStyle = "black";
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.rect(0, 0, c.width, c.height);
-    background_border();
-    ctx.fill("evenodd");
+    if (card.border != "borderless") {
+        const gradient = ctx.createRadialGradient(c.width/2, c.height/2, 0, c.width/2, c.height/2, 600);
+        gradient.addColorStop(0, "grey");
+        gradient.addColorStop(1, "black");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0,0,c.width,c.height);
+        /*ctx.strokeStyle = "black";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.rect(0, 0, c.width, c.height);
+        background_border();
+        ctx.fill("evenodd");*/
+    }
 
     // title
     ctx.fillStyle = "#dddddd";

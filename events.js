@@ -1,4 +1,5 @@
 let inputs = document.getElementsByTagName('input');
+let selects = document.getElementsByTagName('select');
 let cardview = document.getElementById("cardview");
 
 for (let input of inputs) {
@@ -18,6 +19,12 @@ for (let input of inputs) {
             }, false);
             break;
     }
+}
+
+for (let select of selects) {
+    select.addEventListener("change", function(e) {
+        card[e.target.id] = e.target.value;
+    }, false);
 }
 
 document.getElementById("description").onkeyup = (e) => {

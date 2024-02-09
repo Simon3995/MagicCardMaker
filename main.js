@@ -1,5 +1,6 @@
 const update = function() {
-    ctx.clearRect(0, 0, c.width, c.height);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, c.width, c.height);
 
     ctx.drawImage(card.img, 0, 0, c.width, c.height);
 

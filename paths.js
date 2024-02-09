@@ -40,5 +40,12 @@ const power_toughness_border = function() {
 
 // bg border
 const background_border = function() {
-    ctx.roundRect(20, 20, 460, 590, 10);
+    switch (card.border) {
+        case "small":
+            ctx.rect(38, 78, 422, 310);
+            break;
+        case "large":
+            ctx.roundRect(20, 20, 460, 590, 10);
+            break;
+    }
 }

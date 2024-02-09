@@ -15,7 +15,7 @@ class Card {
         this.imgY = 0;
         this.imgW = 0;
         this.imgH = 0;
-        this.borderless = false;
+        this.border = "borderless";
         this.showPowerToughness = true;
     }
 }
